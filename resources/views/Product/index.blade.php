@@ -3,7 +3,10 @@
 @section('content')
 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Product</h1>                     
+                        <h1 class="mt-4">Product</h1> 
+                        
+                        <a href="{{ route('product.create')}}" class="btn btn-primary mb-2">Create New!</a>               
+                        
                         
                         <div class="card mb-4">
                             
@@ -21,7 +24,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($data as $product)
+                                        @foreach ($products as $product)
                                         <tr>
                                             <td>{{$loop->iteration}}</td>
                                             <td>{{ $product['category']}}</td>

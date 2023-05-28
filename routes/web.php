@@ -24,12 +24,22 @@ Route::get('/', function () {
     return view('landing');
 });
 
+//dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
+//product
 Route::get('/product', [ProductController::class, 'index'])->name('product.index');
+Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
+Route::post('/product', [ProductController::class, 'store'])->name('product.store');
 
+//category
 Route::get('/category', [CategoryController::class, 'index'])->name('category.index');
 
+Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
+
+Route::post('/category', [CategoryController::class, 'store'])->name('category.store');
+
+//user 
 Route::get('/user', [UserController::class, 'index'])->name('user.index');
 
 

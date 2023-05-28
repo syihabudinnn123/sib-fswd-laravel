@@ -3,7 +3,8 @@
 @section('content')
 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Category</h1>                 
+                        <h1 class="mt-4">Category</h1>  
+                        <a href="{{ route('category.create')}}" class="btn btn-primary mb-2">Create New!</a>               
                         <div class="card mb-4">
                             <div class="card-body">
                                 <table id="datatablesSimple">
@@ -16,7 +17,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($data as $category )
+                                        @foreach ($categories as $category )
                                         <tr>
                                             <td>{{$loop->iteration}}</td>
                                             <td>{{$category['name']}}</td>
