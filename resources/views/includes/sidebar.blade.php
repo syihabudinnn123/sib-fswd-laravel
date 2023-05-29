@@ -27,7 +27,7 @@
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                 <a class="nav-link" href="{{ route('user.index')}}">User</a>
-                                <a class="nav-link" href="#">Role</a>
+                                <a class="nav-link" href="{{ route('role.index')}}">Role</a>
                                     </a>
                                 </nav>
                             </div>

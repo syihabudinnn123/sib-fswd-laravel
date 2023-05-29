@@ -27,14 +27,19 @@
                                         @foreach ($products as $product)
                                         <tr>
                                             <td>{{$loop->iteration}}</td>
-                                            <td>{{ $product['category']}}</td>
-                                            <td>{{ $product['name']}}</td>
-                                            <td>{{ $product['price']}}</td>
-                                            <td>{{ $product['sale_price']}}</td>
-                                            <td>{{ $product['brands']}}</td>
+                                            <td>{{ $product->category->name}}</td>
+                                            <td>{{ $product->name}}</td>
+                                            <td>Rp. {{ number_format($product->price, 0, 2) }}</td>
+                                            <td>Rp. {{ number_format($product->price_price, 0, 2) }}</td>
+                                            <td>{{ $product->brands }}</td>
                                             <td>
-                                            <a href="" class="btn btn-warning">Edit</a>
-                                            <a href="" class="btn btn-danger">Delete</a>
+                                                <form onsubmit="return confirm('Are you sure? ');" action="{{ route('product.destroy', $product->id) }}" method="POST">
+                                                    <a href="{{ route('product.edit', $product->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                                    @csrf
+                                                    @method('DELETE')
+
+                                                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                                </form>
                                             </td> 
                                         </tr> 
                                         @endforeach

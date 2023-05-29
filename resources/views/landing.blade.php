@@ -18,7 +18,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
+                <a class="navbar-brand" href="#!">Syien Aquatic</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
@@ -58,10 +58,10 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <img src="https://picsum.photos/seed/picsum/1000/300.webp?random=1" class="d-block w-100" alt="gambar1">
+            <img src="https://assets.ayobandung.com/crop/0x0:0x0/1000x300/webp/photo/2022/12/21/853093642.jpg" class="d-block w-100" alt="gambar1">
             </div>
             <div class="carousel-item">
-            <img src="https://picsum.photos/seed/picsum/1000/300.webp?random=1" class="d-block w-100" alt="gambar2">
+            <img src="https://picsum.photos/seed/picsum/1000/300.webp?random=2" class="d-block w-100" alt="gambar2">
             </div>
             <div class="carousel-item">
             <img src="https://picsum.photos/seed/picsum/1000/300.webp?random=1" class="d-block w-100" alt="gambar3">
