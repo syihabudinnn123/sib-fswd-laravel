@@ -13,7 +13,7 @@
                         
                         <div class="mb-3">
                             <label for="category" class="form-label">Category</label>
-                            <select class="form-select" aria-label="category" id="category" name="category">
+                            <select class="form-select @error('category') is-invalid @enderror" aria-label="category" id="category" name="category">
                                 <option selected disabled>- Choose Category -</option>
                                 @foreach ($categories as $cat)
                                     <option value="{{ $cat->id }}" {{ $product->category_id == $cat->id ? 'selected' : '' }}>{{ $cat->name }}</option>
@@ -22,15 +22,24 @@
                         </div>
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" value="{{ $product->name }}" name="name" required>
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" value="{{ $product->name }}" name="name" required>
+                            @error('name')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
                         </div>
                         <div class="mb-3">
                             <label for="price" class="form-label">Price</label>
-                            <input type="text" class="form-control" id="price" value="{{ $product->price }}" name="price" required>
+                            <input type="text" class="form-control @error('price') is-invalid @enderror" id="price" value="{{ $product->price }}" name="price" required>
+                            @error('price')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
                         </div>
                         <div class="mb-3">
                             <label for="sale-price" class="form-label">Sale Price</label>
-                            <input type="text" class="form-control" id="sale-price" value="{{ $product->sale_price }}" name="sale_price" required>
+                            <input type="text" class="form-control @error('sale_price') is-invalid @enderror" id="sale_price" value="{{ $product->sale_price }}" name="sale_price" required>
+                            @error('sale_price')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
                         </div>
                         <div class="mb-3">
                             <label for="brand" class="form-label">Brand</label>
