@@ -32,6 +32,7 @@
                                             <td>Rp. {{ number_format($product->price, 0, 2) }}</td>
                                             <td>Rp. {{ number_format($product->price_price, 0, 2) }}</td>
                                             <td>{{ $product->brands }}</td>
+                                            
                                             <td>
                                                 <form onsubmit="return confirm('Are you sure? ');" action="{{ route('product.destroy', $product->id) }}" method="POST">
                                                     <a href="{{ route('product.edit', $product->id) }}" class="btn btn-sm btn-warning">Edit</a>
