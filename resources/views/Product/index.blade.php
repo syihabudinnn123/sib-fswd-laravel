@@ -30,7 +30,7 @@
                                             <td>{{ $product->category->name}}</td>
                                             <td>{{ $product->name}}</td>
                                             <td>Rp. {{ number_format($product->price, 0, 2) }}</td>
-                                            <td>Rp. {{ number_format($product->price_price, 0, 2) }}</td>
+                                            <td>Rp. {{ number_format($product->sale_price, 0, 2) }}</td>
                                             <td>{{ $product->brands }}</td>
                                             
                                             <td>
